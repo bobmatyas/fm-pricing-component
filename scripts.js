@@ -1,31 +1,16 @@
-
 "use strict";
-
-console.log(`script loaded`);
-
-
 
 const togglePricing = (element, amount) => {
     if (element.classList.contains('monthly')) {
-        console.log(element);
-        console.log('class is monthly');
-        element.textContent = `${amount[0]}`;
         element.classList.remove('monthly');
         element.classList.add('yearly');
         element.textContent = `${amount[1]}`;
-        return;
-    } else if (basicPricing.classList.contains('yearly')) {
-        console.log('id is yearly');
-        console.log(element);
-        element.textContent = `${amount[1]}`;
+    } else if (element.classList.contains('yearly')) {
+        element.textContent = `${amount[0]}`;
         element.classList.remove('yearly');
         element.classList.add('monthly');
-        element.textContent = `${amount[0]}`;
-        return;
     } 
 } 
-
-/* set prices in an array? switch array on click */
 
 const changePricing = () => {
     const basicPrices = ['19.99', '199.99'];
