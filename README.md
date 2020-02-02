@@ -2,10 +2,11 @@
 
 My solution to the Frontend Mentor file transfer pricing component. I built a mobile-first site using flexbox, CSS custom properties, and vanilla JavaScript. 
 
+View in the browser:
+
+[https://bobmatyas.github.io/fm-pricing-component/](https://bobmatyas.github.io/fm-pricing-component/)
+
 ![Design preview for the File Transfer pricing component coding challenge](./design/desktop-preview.jpg)
-
-## Welcome! 👋
-
 
 ## The challenge
 
