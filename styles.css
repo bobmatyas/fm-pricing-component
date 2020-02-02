@@ -19,12 +19,17 @@ html {
 }
 
 body { 
-    background: var(--very-light-gray) url('images/bg-top.svg') no-repeat top right;
+    background: var(--very-light-gray) url('images/bg-top.svg') no-repeat;
+    background-position: 160% top;
+    background-size: 50%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .pricing__header { 
     color: var(--blue-gray);
     font-size: 4rem;
+    margin: 4rem auto 3rem auto;
     text-align: center;
 }
 
@@ -135,7 +140,7 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    margin: 25px 0 50px 0;
+    margin: 4rem auto;
     padding: 0;
     text-align: center;
 }
@@ -196,6 +201,10 @@ body {
 }
 
 @media (min-width: 960px) {
+
+  body { 
+    background: url('images/bg-top.svg') no-repeat top right, var(--very-light-gray)  url('images/bg-bottom.svg') no-repeat bottom left;
+}
 
   .pricing__container {
     align-items: center;
