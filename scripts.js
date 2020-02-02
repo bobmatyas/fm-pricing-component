@@ -24,9 +24,5 @@ const changePricing = () => {
     togglePricing(masterPricing, masterPrices);
 }
 
-const slidePricing = () => {
-  changePricing();
-}
-
-const pricingType = document.getElementById('myonoffswitch');
-pricingType.addEventListener('change', slidePricing);
+const pricingType = document.getElementById('billingCycle');
+pricingType.addEventListener('change', changePricing);

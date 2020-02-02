@@ -200,6 +200,62 @@ body {
     right: 0px; 
 }
 
+input[type=checkbox] {
+  --height: 3.5rem;
+  --inset: 0.25rem;
+  --border-size: 3px;
+  --color-hover: #dcdcdc;
+  --color-bg: hsl(0, 0%, 64%);
+  --color-bg-checked: hsl(201, 100%, 50%);
+  --color-knob: #fff;
+  --knob-size: calc(var(--height) - var(--inset) * 2);
+  --width: calc(var(--height) * 2 - var(--inset) * 2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--height);
+  border: var(--border-size) solid transparent;
+  transition: background 0.3s ease;
+}
+input[type=checkbox]:focus {
+  outline: none;
+}
+input[type=checkbox]:hover, input[type=checkbox]:focus {
+  background: var(--color-hover);
+}
+input[type=checkbox]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--purple-gradient);
+  transition: background 0.3s ease;
+}
+input[type=checkbox]:after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  top: calc(var(--inset));
+  left: calc(var(--inset));
+  width: var(--knob-size);
+  height: var(--knob-size);
+  background: var(--color-knob);
+  transition: transform 0.3s ease;
+}
+input[type=checkbox]:checked:before {
+  background-image: var(--purple-gradient);
+}
+input[type=checkbox]:checked:after {
+  transform: translateX(100%);
+}
+
 @media (min-width: 960px) {
 
   body { 
