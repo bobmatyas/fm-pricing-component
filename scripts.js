@@ -13,9 +13,9 @@ const togglePricing = (element, amount) => {
 } 
 
 const changePricing = () => {
-    const basicPrices = ['19.99', '199.99'];
-    const proPrices = ['24.99', '249.99'];
-    const masterPrices = ['39.99', '399.99'];
+    const basicPrices = ['199.99', '19.99'];
+    const proPrices = ['249.99', '24.99'];
+    const masterPrices = ['399.99', '39.99'];
     const basicPricing = document.getElementById('basicPricing');
     const proPricing = document.getElementById('proPricing');
     const masterPricing = document.getElementById('masterPricing');
@@ -24,5 +24,9 @@ const changePricing = () => {
     togglePricing(masterPricing, masterPrices);
 }
 
-const toggleTest = document.getElementById('toggle');
-toggleTest.addEventListener("click", changePricing);
+const slidePricing = () => {
+  changePricing();
+}
+
+const pricingType = document.getElementById('myonoffswitch');
+pricingType.addEventListener('change', slidePricing);
